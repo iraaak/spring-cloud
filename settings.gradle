@@ -1,0 +1,6 @@
+include 'Discovery'
+include 'FirstService'
+include 'SecondService'
+include 'CloudGateway'
+include 'Zipkin'
+

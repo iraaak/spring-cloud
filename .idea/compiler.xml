@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="spring-cloud.CloudGateway.test" target="11" />
+      <module name="spring-cloud.Discovery.test" target="11" />
+      <module name="spring-cloud.gateway.main" target="11" />
+      <module name="spring-cloud.gateway.test" target="11" />
+      <module name="spring-cloud.SecondService.test" target="11" />
+      <module name="spring-cloud.src.main" target="11" />
+      <module name="spring-cloud.src.test" target="11" />
+      <module name="spring-cloud.Zipkin.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

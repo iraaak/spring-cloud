@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_spring-cloud" default="compile.module.spring-cloud">
+  <dirname property="module.spring-cloud.basedir" file="${ant.file.module_spring-cloud}"/>
+  
+  <property name="module.jdk.home.spring-cloud" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.spring-cloud" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.spring-cloud" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.spring-cloud" value="-encoding UTF-8 -source 13 -target 13 ${compiler.args}"/>
+  
+  <property name="spring-cloud.output.dir" value="undefined"/>
+  <property name="spring-cloud.testoutput.dir" value="undefined"/>
+  
+  <path id="spring-cloud.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="spring-cloud.module.production.classpath"/>
+  
+  <path id="spring-cloud.runtime.production.module.classpath"/>
+  
+  <path id="spring-cloud.module.classpath"/>
+  
+  <path id="spring-cloud.runtime.module.classpath"/>
+  
+  
+  <patternset id="excluded.from.module.spring-cloud">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.spring-cloud">
+    <patternset refid="excluded.from.module.spring-cloud"/>
+  </patternset>
+  
+  
+  <target name="compile.module.spring-cloud" depends="compile.module.spring-cloud.production,compile.module.spring-cloud.tests" description="Compile module spring-cloud"/>
+  
+  <target name="compile.module.spring-cloud.production" depends="register.custom.compilers" description="Compile module spring-cloud; production classes"/>
+  
+  <target name="compile.module.spring-cloud.tests" depends="register.custom.compilers,compile.module.spring-cloud.production" description="compile module spring-cloud; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.spring-cloud" description="cleanup module">
+    <delete dir="${spring-cloud.output.dir}"/>
+    <delete dir="${spring-cloud.testoutput.dir}"/>
+  </target>
+</project>
